@@ -1,13 +1,10 @@
-
-window.onload = function what(){
-   var c = document.getElementById("canvas");
-   var ctx = c.getContext("2d");
-   ctx.moveTo(0,100);
-   ctx.lineTo(200,0);
-   ctx.lineTo(400,100);
-   ctx.lineTo(0,100);
-   ctx.lineTo(0,300);
-   ctx.lineTo(400,300);
-   ctx.lineTo(400,100);
-   ctx.stroke();
+window.onload = function what() {
+   // var c = document.getElementById("canvas");
+   // var ctx = c.getContext("2d");
+   // ctx.fillStyle="#FF0000";
+   // ctx.fillRect(150,150,150,75);
+   // ctx.beginPath();
+   // ctx.moveTo(300, 0);
+   // ctx.quadraticCurveTo(80, 80, 0, 300);
+   // ctx.stroke();
 };

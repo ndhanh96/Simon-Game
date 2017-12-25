@@ -1,3 +1,23 @@
 #canvas {
    border: solid 1px black;
+   border-top-left-radius: 100%;
+   background: green;
+}
+
+#canvas2 {
+   border: solid 1px black;
+   background: red;
+   border-top-right-radius: 100%;
+}
+
+#canvas3 {
+   border: solid 1px black;
+   background: yellow;
+   border-bottom-left-radius: 100%;
+}
+
+#canvas4 {
+   border: solid 1px black;
+   background: skyblue;
+   border-bottom-right-radius: 100%;
 }

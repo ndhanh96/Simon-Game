@@ -20,15 +20,22 @@
    display: inline-block;
    height: 250px;
    width: 250px;
-   background-color: #094a8f;
+   background-color: #cca707;
    border-bottom-left-radius: 250px;
-   /* margin-right: 0; */
 }
 
 #box4 {
    display: inline-block;
    height: 250px;
    width: 250px;
-   background-color: #cca707;
+   background-color: #094a8f;
    border-bottom-right-radius: 250px;
+}
+
+.circle1 {
+   text-align: center;
+}
+
+.circle2 {
+   text-align: center;
 }

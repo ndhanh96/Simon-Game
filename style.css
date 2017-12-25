@@ -6,7 +6,7 @@
 
 #canvas2 {
    border: solid 1px black;
-   background: red;
+   background: #bf3333;
    border-top-right-radius: 100%;
 }
 
@@ -20,4 +20,17 @@
    border: solid 1px black;
    background: skyblue;
    border-bottom-right-radius: 100%;
+}
+
+#canvas4:hover {
+   /* background: black; */
+
+}
+
+div {
+   /* background: black; */
+   width: 410px;
+   margin: auto;
+   padding: 20vh 0;
+   /* width: 22%; */
 }

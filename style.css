@@ -58,18 +58,20 @@
 }
 
 .smallCircle {
-   /* position: absolute;
-   background: yellow;
-   text-align: center;
-   margin-left: auto;
-   margin-right: auto;
-   left: 0;
-   right: 0; */
    margin: auto;
-   background: yellow;
+   /* background: yellow; */
+   border-radius: 200px;
+   height: 450px;
+   width: 450px;
+}
+
+.smallCircle1 {
+   margin: auto;
+   /* background: yellow; */
    border-radius: 200px;
    height: 200px;
    width: 200px;
+   background: yellow;
 }
 
 body {

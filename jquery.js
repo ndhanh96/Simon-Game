@@ -12,4 +12,5 @@ $(document).ready(function(){
    $("#box2").mouseleave(function(){
       $("#box2").css("background", "#9f0f17");
    });
+
 });

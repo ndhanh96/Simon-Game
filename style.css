@@ -64,16 +64,17 @@
    border-radius: 200px;
    height: 200px;
    width: 450px;
-   top: -325px;
+   top: -335px;
 }
 
 .smallCircle1 {
    margin: auto;
    /* background: yellow; */
-   border-radius: 200px;
+   border-radius: 210px;
    height: 200px;
    width: 200px;
    background: wheat;
+   border: 10px solid black;
 }
 
 body {

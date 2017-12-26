@@ -58,6 +58,7 @@
 }
 
 .smallCircle {
+   text-align: center;
    margin: auto;
    /* background: yellow; */
    border-radius: 200px;
@@ -75,7 +76,7 @@
 }
 
 body {
-   /* position: relative; */
+   position: relative;
    margin: 0;
-   height: 100%;
+   /* height: 100%; */
 }

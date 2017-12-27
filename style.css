@@ -147,3 +147,24 @@ body {
    padding-top: 10px;
    margin: 0;
 }
+
+.strict {
+   display: inline-block;
+   font-family: 'Fira Sans', sans-serif;
+   font-size: 0.7em;
+}
+
+.strictButton {
+   margin: auto;
+   cursor: pointer;
+   height: 20px;
+   width: 20px;
+   border: 2px solid black;
+   border-radius: 20px;
+   background: yellow;
+}
+
+.strictButtonName {
+   padding-top: 10px;
+   margin: 0;
+}

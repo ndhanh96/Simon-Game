@@ -6,6 +6,8 @@
    <title>Simon Game&reg;</title>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+   <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
    <script src="jquery.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Bungee|Fira+Sans" rel="stylesheet">
@@ -15,12 +17,23 @@
 <body>
    <div class="bigCircle">
       <div class="circle1">
-         <span id="box1"></span><span id="box2"></span>
+         <span class="visible-*-inline-block" id="box1"></span><span class="visible-*-inline-block" id="box2"></span>
       </div>
       <div class="circle2">
          <span id="box3"></span><span id="box4"></span>
       </div>
       <div class="circle3">
+         <p id="gameName">Simon&reg;</p>
+         <div class="countBoxChild">
+            <p class="countBoxContent">- -</p>
+            <p class="countBoxName">COUNT</p>
+         </div>
+         <div class="start">
+            <div class="startButton">
+               
+            </div>
+            <p class="startButtonName">START</p>
+         </div>
          
       </div>
    </div>

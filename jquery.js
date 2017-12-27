@@ -1,10 +1,13 @@
 $(document).ready(function() {
-   $("#box4").hover(function() {});
-
-   $("#box2").hover(function() {
-      $("#box2").css("background", "red");
-   });
-   $("#box2").mouseleave(function() {
-      $("#box2").css("background", "#9f0f17");
+   $("#box1").click(function(event) {
+      /* Act on the event */
+      $("#box1").css({
+         background: '#13ff7c'
+      });
+      setTimeout(function() {
+         $("#box1").css({
+            background: '#00a74a'
+         });
+      }, 2000);
    });
 });

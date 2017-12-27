@@ -55,6 +55,7 @@
    width: 410px;
    padding: 20px;
    border-radius: 50%;
+   height: 410px;
    /* position: absolute; */
 }
 
@@ -62,16 +63,15 @@
    position: relative;
    text-align: center;
    margin: auto;
-   border-radius: 200px;
-   height: 200px;
-   width: 450px;
+   height: auto;
+   min-width: 220px;
    top: -335px;
 }
 
 .smallCircle1 {
    margin: auto;
    /* background: yellow; */
-   border-radius: 210px;
+   border-radius: 220px;
    height: 200px;
    width: 200px;
    background: wheat;
@@ -95,8 +95,7 @@ body {
 
 #countBox {
    display: inline-block;
-   width: 50px;
-   height: 50px;
+   
 }
 
 #countBoxChild {
@@ -120,4 +119,14 @@ body {
 .count-led-off {
    color: #772c2c;
    margin: 0;
+}
+
+.circle3 {
+   position: relative;
+   top: -300px;
+   border-radius: 200px;
+   right: -100px;
+   height: 200px;
+   width: 200px;
+   background: yellow;
 }

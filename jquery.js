@@ -13,10 +13,15 @@ $(document).ready(function() {
    var yellowOFF = "#999900";
    var arrBot = [];
    var arrPlayer = [];
+   var redSound = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
+   var greenSound = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
+   var blueSound = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
+   var yellowSound = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
    // arrBot.push(random);
 
-   function lightUp(box, colorON, colorOFF) {
+   function lightUp(box, colorON, colorOFF,sound) {
       $(box).css("background-color", colorON);
+      new Audio(sound).play();
       setTimeout(function() {
          $(box).css("background-color", colorOFF);
       }, 1000);
@@ -29,13 +34,13 @@ $(document).ready(function() {
       count++;
       var random = Math.floor((Math.random() * 10) + 2);
       if (random <= 3) {
-         lightUp("#box1", greenLight, greenOFF);
+         lightUp("#box1", greenLight, greenOFF,greenSound);
       } else if (random <= 6) {
-         lightUp("#box2", redLight, redOFF);
+         lightUp("#box2", redLight, redOFF,redSound);
       } else if (random <= 9) {
-         lightUp("#box3", yellowLight, yellowOFF);
+         lightUp("#box3", yellowLight, yellowOFF,yellowSound);
       } else if (random <= 12) {
-         lightUp("#box4", blueLight, blueOFF);
+         lightUp("#box4", blueLight, blueOFF,blueSound);
       }
       $("#countTime").text(count);
    }

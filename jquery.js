@@ -1,7 +1,7 @@
 $(document).ready(function() {
    var redLight = "red";
    var redOFF = "#9f0f17";
-   var greenLight = "green"
+   var greenLight = "#66ff33"
    var greenOFF = "#008000";
    var blueLight = "blue";
    var blueOFF = "#094a8f";

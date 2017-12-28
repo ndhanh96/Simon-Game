@@ -43,6 +43,9 @@ $(document).ready(function() {
       } else if (random <= 12) {
          lightUp("#box4", blueLight, blueOFF,blueSound);
       }
+      if(count < 10) {
+         count = "0" + count.toString();
+      }
       $("#countTime").text(count);
    }
 
@@ -87,7 +90,7 @@ $(document).ready(function() {
          reStart();
       } else if (!startClicked && gameOn) {
          startClicked = true;
-         $("#countTime").text(count);
+         $("#countTime").text("00");
          $("#startButton").removeClass('startButtonOff').addClass('startButton');
          runGame = setInterval(function() { TurnON() }, 2000);
       }

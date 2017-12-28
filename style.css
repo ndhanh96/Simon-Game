@@ -104,6 +104,7 @@ body {
 }
 
 .countBoxContent {
+   font-family: 'Catamaran', sans-serif;
    height: 100%;
    line-height: 40px;
    margin: 0;

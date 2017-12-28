@@ -75,7 +75,7 @@ $(document).ready(function() {
 
    function reStart() {
       count = 0;
-      $("#countTime").text(count);
+      $("#countTime").text("00");
       $("#startButton").removeClass('startButton').addClass('startButtonOff');
       setTimeout(function() {
          $("#startButton").removeClass('startButtonOff').addClass('startButton');

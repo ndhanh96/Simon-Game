@@ -1,4 +1,5 @@
 $(document).ready(function() {
+   var times = 0;
    var count = 0;
    var startClicked = false;
    var runGame;
@@ -11,7 +12,7 @@ $(document).ready(function() {
    var blueOFF = "#006699";
    var yellowLight = "#ffff66";
    var yellowOFF = "#999900";
-   var arrBot = [];
+   var arrBot = [3, 6, 9, 12];
    var arrPlayer = [];
    var redSound = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
    var greenSound = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
@@ -19,7 +20,7 @@ $(document).ready(function() {
    var yellowSound = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
    // arrBot.push(random);
 
-   function lightUp(box, colorON, colorOFF,sound) {
+   function lightUp(box, colorON, colorOFF, sound) {
       $(box).css("background-color", colorON);
       // new Audio(sound).play();
       $("audio").attr('src', sound);
@@ -33,20 +34,39 @@ $(document).ready(function() {
          reStart();
       }
       count++;
-      var random = Math.floor((Math.random() * 10) + 2);
-      if (random <= 3) {
-         lightUp("#box1", greenLight, greenOFF,greenSound);
-      } else if (random <= 6) {
-         lightUp("#box2", redLight, redOFF,redSound);
-      } else if (random <= 9) {
-         lightUp("#box3", yellowLight, yellowOFF,yellowSound);
-      } else if (random <= 12) {
-         lightUp("#box4", blueLight, blueOFF,blueSound);
-      }
-      if(count < 10) {
+      
+      if (count < 10) {
          count = "0" + count.toString();
       }
       $("#countTime").text(count);
+      if (typeof arrBot[times] == "number") {
+         if (arrBot[times] <= 3) {
+            lightUp("#box1", greenLight, greenOFF, greenSound);
+         } else if (arrBot[times] <= 6) {
+            lightUp("#box2", redLight, redOFF, redSound);
+         } else if (arrBot[times] <= 9) {
+            lightUp("#box3", yellowLight, yellowOFF, yellowSound);
+         } else if (arrBot[times] <= 12) {
+            lightUp("#box4", blueLight, blueOFF, blueSound);
+         }
+         times++;
+      } else {
+         var random = Math.floor((Math.random() * 10) + 2);
+         if (random <= 3) {
+            lightUp("#box1", greenLight, greenOFF, greenSound);
+         } else if (random <= 6) {
+            lightUp("#box2", redLight, redOFF, redSound);
+         } else if (random <= 9) {
+            lightUp("#box3", yellowLight, yellowOFF, yellowSound);
+         } else if (random <= 12) {
+            lightUp("#box4", blueLight, blueOFF, blueSound);
+         }
+         setTimeout(function() {
+            turnOFF();
+            times = 0;
+         },1000);
+      }
+      
    }
 
    function turnOFF(argument) {
@@ -55,8 +75,10 @@ $(document).ready(function() {
       $("#box2").css("background-color", redOFF);
       $("#box3").css("background-color", yellowOFF);
       $("#box4").css("background-color", blueOFF);
+      $("#startButton").removeClass('startButton').addClass('startButtonOff');
+      clearInterval(runGame);
+      $("#countTime").text("00");
    }
-   // alert(random);
 
    $("input[type=checkbox]").click(function(event) {
       /* Act on the event */
@@ -74,6 +96,7 @@ $(document).ready(function() {
    });
 
    function reStart() {
+      times = 0;
       count = 0;
       $("#countTime").text("00");
       $("#startButton").removeClass('startButton').addClass('startButtonOff');

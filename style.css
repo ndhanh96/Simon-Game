@@ -175,6 +175,16 @@ body {
    border-radius: 5px;
 }
 
+.strictLedOff {
+   margin: auto;
+   margin-bottom: 4px;
+   height: 8px;
+   width: 8px;
+   border: 1px solid black;
+   background: #660000;
+   border-radius: 5px;
+}
+
 .strictButton {
    margin: auto;
    cursor: pointer;

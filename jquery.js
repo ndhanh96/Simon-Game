@@ -1,4 +1,5 @@
 $(document).ready(function() {
+   var count = 0;
    var startClicked = false;
    var runGame;
    var gameOn = false;
@@ -18,10 +19,14 @@ $(document).ready(function() {
       $(box).css("background-color", colorON);
       setTimeout(function() {
          $(box).css("background-color", colorOFF);
-      }, 2000);
+      }, 1000);
    }
 
    function TurnON() {
+      if (count > 99) {
+         reStart();
+      }
+      count++;
       var random = Math.floor((Math.random() * 10) + 2);
       if (random <= 3) {
          lightUp("#box1", greenLight, greenOFF);
@@ -32,6 +37,7 @@ $(document).ready(function() {
       } else if (random <= 12) {
          lightUp("#box4", blueLight, blueOFF);
       }
+      $("#countTime").text(count);
    }
 
    function turnOFF(argument) {
@@ -47,23 +53,37 @@ $(document).ready(function() {
       /* Act on the event */
       if (!gameOn) {
          gameOn = true;
-         runGame = setInterval(function() { TurnON() }, 3000);
       } else {
+         count = 0
          gameOn = false;
          clearInterval(runGame);
          turnOFF();
          startClicked = false;
          $("#startButton").removeClass('startButton').addClass('startButtonOff');
+         $("#countTime").text("--");
       }
    });
 
-   $("#startButton").click(function(event) {
-      if(startClicked) {
-         $("#startButton").removeClass('startButton').addClass('startButtonOff');
-         startClicked = false;
-      } else if(!startClicked && gameOn) {
-         startClicked = true;
+   function reStart() {
+      count = 0;
+      $("#countTime").text(count);
+      $("#startButton").removeClass('startButton').addClass('startButtonOff');
+      setTimeout(function() {
          $("#startButton").removeClass('startButtonOff').addClass('startButton');
+      }, 500);
+      clearInterval(runGame);
+      turnOFF();
+      runGame = setInterval(function() { TurnON() }, 2000);
+   }
+
+   $("#startButton").click(function(event) {
+      if (startClicked && gameOn) {
+         reStart();
+      } else if (!startClicked && gameOn) {
+         startClicked = true;
+         $("#countTime").text(count);
+         $("#startButton").removeClass('startButtonOff').addClass('startButton');
+         runGame = setInterval(function() { TurnON() }, 2000);
       }
    });
 });

@@ -113,6 +113,16 @@ body {
    margin: 0;
 }
 
+.countBoxContentON {
+   font-family: 'Catamaran', sans-serif;
+   height: 100%;
+   line-height: 40px;
+   margin: 0;
+   font-size: 1.5em;
+   color: red;
+   margin: 0;
+}
+
 .countBoxName {
    font-family: 'Fira Sans', sans-serif;
    padding-top: 10px;
@@ -170,7 +180,7 @@ body {
    font-size: 0.7em;
 }
 
-.strictLed {
+.strictLedON {
    margin: auto;
    margin-bottom: 4px;
    height: 8px;
@@ -180,7 +190,7 @@ body {
    border-radius: 5px;
 }
 
-.strictLedOff {
+.strictLedOFF {
    margin: auto;
    margin-bottom: 4px;
    height: 8px;

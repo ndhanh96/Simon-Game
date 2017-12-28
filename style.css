@@ -100,9 +100,10 @@ body {
 }
 
 .countBoxContent {
-   height: 40px;
+   height: 100%;
+   line-height: 40px;
    margin: 0;
-   font-size: 2em;
+   font-size: 1.5em;
    color: #772c2c;
    margin: 0;
 }
@@ -141,6 +142,16 @@ body {
    border: 2px solid black;
    border-radius: 20px;
    background: red;
+}
+
+.startButtonOff {
+   margin: auto;
+   cursor: pointer;
+   height: 20px;
+   width: 20px;
+   border: 2px solid black;
+   border-radius: 20px;
+   background: #660000;
 }
 
 .startButtonName {

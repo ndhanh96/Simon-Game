@@ -1,4 +1,7 @@
 $(document).ready(function() {
+   var startClicked = false;
+   var runGame;
+   var gameOn = false;
    var redLight = "red";
    var redOFF = "#993300";
    var greenLight = "#66ff33"
@@ -17,11 +20,9 @@ $(document).ready(function() {
          $(box).css("background-color", colorOFF);
       }, 2000);
    }
-   // alert(random);
 
-
-   setInterval(function() {
-      random = Math.floor((Math.random() * 10) + 2);
+   function TurnON() {
+      var random = Math.floor((Math.random() * 10) + 2);
       if (random <= 3) {
          lightUp("#box1", greenLight, greenOFF);
       } else if (random <= 6) {
@@ -31,6 +32,38 @@ $(document).ready(function() {
       } else if (random <= 12) {
          lightUp("#box4", blueLight, blueOFF);
       }
-   },3000);
+   }
 
+   function turnOFF(argument) {
+      // body...
+      $("#box1").css("background-color", greenOFF);
+      $("#box2").css("background-color", redOFF);
+      $("#box3").css("background-color", yellowOFF);
+      $("#box4").css("background-color", blueOFF);
+   }
+   // alert(random);
+
+   $("input[type=checkbox]").click(function(event) {
+      /* Act on the event */
+      if (!gameOn) {
+         gameOn = true;
+         runGame = setInterval(function() { TurnON() }, 3000);
+      } else {
+         gameOn = false;
+         clearInterval(runGame);
+         turnOFF();
+         startClicked = false;
+         $("#startButton").removeClass('startButton').addClass('startButtonOff');
+      }
+   });
+
+   $("#startButton").click(function(event) {
+      if(startClicked) {
+         $("#startButton").removeClass('startButton').addClass('startButtonOff');
+         startClicked = false;
+      } else if(!startClicked && gameOn) {
+         startClicked = true;
+         $("#startButton").removeClass('startButtonOff').addClass('startButton');
+      }
+   });
 });

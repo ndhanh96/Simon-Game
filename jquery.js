@@ -21,7 +21,8 @@ $(document).ready(function() {
 
    function lightUp(box, colorON, colorOFF,sound) {
       $(box).css("background-color", colorON);
-      new Audio(sound).play();
+      // new Audio(sound).play();
+      $("audio").attr('src', sound);
       setTimeout(function() {
          $(box).css("background-color", colorOFF);
       }, 1000);

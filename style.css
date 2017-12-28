@@ -12,7 +12,7 @@
    display: inline-block;
    height: 200px;
    width: 200px;
-   background-color: #9f0f17;
+   background-color: #993300;
    border-top-right-radius: 200px;
    vertical-align: top;
 }
@@ -21,7 +21,7 @@
    display: inline-block;
    height: 200px;
    width: 200px;
-   background-color: #cca707;
+   background-color: #999900;
    border-bottom-left-radius: 200px;
    vertical-align: bottom;
    margin-right: 10px;
@@ -31,7 +31,7 @@
    display: inline-block;
    height: 200px;
    width: 200px;
-   background-color: #094a8f;
+   background-color: #006699;
    border-bottom-right-radius: 200px;
    vertical-align: bottom;
    /* margin-left: 20px; */

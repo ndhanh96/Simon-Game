@@ -1,12 +1,12 @@
 $(document).ready(function() {
    var redLight = "red";
-   var redOFF = "#9f0f17";
+   var redOFF = "#993300";
    var greenLight = "#66ff33"
    var greenOFF = "#008000";
-   var blueLight = "blue";
-   var blueOFF = "#094a8f";
-   var yellowLight = "yellow";
-   var yellowOFF = "#cca707";
+   var blueLight = "#0099cc";
+   var blueOFF = "#006699";
+   var yellowLight = "#ffff66";
+   var yellowOFF = "#999900";
    var arrBot = [];
    var arrPlayer = [];
    // arrBot.push(random);
@@ -15,7 +15,7 @@ $(document).ready(function() {
       $(box).css("background-color", colorON);
       setTimeout(function() {
          $(box).css("background-color", colorOFF);
-      }, 1000);
+      }, 2000);
    }
    // alert(random);
 
@@ -31,6 +31,6 @@ $(document).ready(function() {
       } else if (random <= 12) {
          lightUp("#box4", blueLight, blueOFF);
       }
-   },2000);
+   },3000);
 
 });

@@ -168,12 +168,14 @@ $(document).ready(function() {
             runGame = setInterval(function() { TurnON() }, 2000);
          }
       } else if (arrBot[userColor] != color && !strictMode) {
+         Move(color);
          isGameRunning = true;
          wrongColor = true;
          $("#countTime").text("!!");
          times = 0;
          runGame = setInterval(function() { TurnON() }, 2000);
       } else if (arrBot[userColor] != color && strictMode) {
+         Move(color);
          isGameRunning = true;
          $("#countTime").text("!!");
          setTimeout(function() {
@@ -199,6 +201,9 @@ $(document).ready(function() {
       } else if (strictMode && gameOn && !startClicked) {
          strictMode = false;
          $("#strictled").removeClass('strictLedON').addClass('strictLedOFF');
+      } else if(!strictMode && gameOn && startClicked) {
+         strictMode = true;
+         $("#strictled").removeClass('strictLedOFF').addClass('strictLedON');
       }
    });
 

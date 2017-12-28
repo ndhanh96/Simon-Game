@@ -167,6 +167,18 @@ $(document).ready(function() {
             times = 0;
             runGame = setInterval(function() { TurnON() }, 2000);
          }
+         if (userColor == 20) {
+            setTimeout(function() {
+               alert("You WIN");
+               reStart();
+            }, 1000);
+            $("#strictled").removeClass('strictLedON').addClass('strictLedOFF');
+            arrBot = [];
+            strictMode = false;
+            userColor = 0;
+            wrongColor = false;
+            isGameRunning = true;
+         }
       } else if (arrBot[userColor] != color && !strictMode) {
          Move(color);
          isGameRunning = true;
@@ -201,7 +213,7 @@ $(document).ready(function() {
       } else if (strictMode && gameOn && !startClicked) {
          strictMode = false;
          $("#strictled").removeClass('strictLedON').addClass('strictLedOFF');
-      } else if(!strictMode && gameOn && startClicked) {
+      } else if (!strictMode && gameOn && startClicked) {
          strictMode = true;
          $("#strictled").removeClass('strictLedOFF').addClass('strictLedON');
       }
